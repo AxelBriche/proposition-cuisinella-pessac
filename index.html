@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposition · Marie-Laure Biscuola — Cuisinella Pessac</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#F7F2E8',
+          'cream-soft': '#FCFAF4',
+          'cream-warm': '#E7E1D1',
+          espresso: '#172421',
+          'espresso-soft': '#2E3F3A',
+          'espresso-mid': '#66746B',
+          brass: '#A9864F',
+          'brass-soft': '#D2B06E',
+          'brass-pale': '#E9DCC0',
+          terracotta: '#B86C50',
+          clay: '#B86C50',
+          sage: '#7E967F',
+          navy: '#13253A',
+          stone: '#D8D2C4',
+          line: '#D8D2C4',
+          'line-soft': '#E9E3D8',
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          sans: ['Inter Tight', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --cream: #F7F2E8;
+    --cream-soft: #FCFAF4;
+    --cream-warm: #E7E1D1;
+    --espresso: #172421;
+    --espresso-soft: #2E3F3A;
+    --espresso-mid: #66746B;
+    --navy: #13253A;
+    --sage: #7E967F;
+    --sage-dark: #536C5A;
+    --brass: #A9864F;
+    --brass-soft: #D2B06E;
+    --clay: #B86C50;
+    --line: #D8D2C4;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    background:
+      linear-gradient(180deg, #FCFAF4 0%, #F7F2E8 46%, #EEE7D8 100%);
+  }
+  ::selection { background: rgba(126, 150, 127, 0.28); }
+  .font-display { font-variation-settings: "opsz" 144, "SOFT" 50; }
+  .font-display-tight { font-variation-settings: "opsz" 14, "SOFT" 0; }
+
+  .grain {
+    position: fixed; inset: 0; pointer-events: none; z-index: 1;
+    opacity: 0.035; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .smallcaps {
+    font-variant: small-caps;
+    letter-spacing: 0.14em;
+    text-transform: lowercase;
+  }
+  .smallcaps-up {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.72rem;
+    font-weight: 500;
+  }
+
+  .ornament-line { flex: 1; height: 1px; background: var(--line); }
+
+  .price-strike {
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+    opacity: 0.45;
+  }
+
+  .reveal {
+    opacity: 0; transform: translateY(14px);
+    animation: rise 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+  @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+  .delay-1 { animation-delay: 0.08s; }
+  .delay-2 { animation-delay: 0.18s; }
+  .delay-3 { animation-delay: 0.30s; }
+  .delay-4 { animation-delay: 0.45s; }
+
+  .featured-bg {
+    background:
+      linear-gradient(135deg, rgba(126, 150, 127, 0.18), transparent 42%),
+      linear-gradient(180deg, #1A2E2A 0%, #13253A 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .featured-bg::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.06;
+    pointer-events: none;
+  }
+
+  .ribbon {
+    position: absolute;
+    top: -1px; right: 24px;
+    background: #B65A38;
+    color: #F5EFE3;
+    padding: 8px 14px 10px;
+    font-variant: small-caps;
+    letter-spacing: 0.12em;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  .ribbon::after {
+    content: "";
+    position: absolute;
+    bottom: -8px; right: 0;
+    border-left: 8px solid transparent;
+    border-right: 0 solid transparent;
+    border-top: 8px solid #7d3d24;
+  }
+
+  .hairline { background: linear-gradient(90deg, transparent, var(--line) 20%, var(--line) 80%, transparent); height: 1px; }
+
+  .hero-section {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(19, 37, 58, 0.045) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(19, 37, 58, 0.035) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: linear-gradient(180deg, black, transparent 78%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(330px, 0.72fr);
+    gap: clamp(2.5rem, 5vw, 5.5rem);
+    align-items: center;
+  }
+  .hero-visual {
+    position: relative;
+    min-height: 560px;
+    border: 1px solid rgba(216, 210, 196, 0.95);
+    background: #F4EFE5;
+    box-shadow: 0 32px 80px rgba(19, 37, 58, 0.16);
+    overflow: hidden;
+  }
+  .hero-visual img {
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+    object-fit: cover;
+    object-position: 58% center;
+    display: block;
+  }
+  .hero-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, transparent 50%, rgba(19, 37, 58, 0.36) 100%),
+      linear-gradient(90deg, rgba(247, 242, 232, 0.2), transparent 42%);
+    pointer-events: none;
+  }
+  .hero-note {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    color: #FCFAF4;
+  }
+  .hero-note strong {
+    display: block;
+    font-family: Fraunces, serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+  }
+  .hero-note span { color: rgba(252, 250, 244, 0.72); }
+  .trust-band {
+    border-top: 1px solid var(--line);
+    background: rgba(252, 250, 244, 0.72);
+    backdrop-filter: blur(18px);
+  }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .trust-item {
+    padding: 24px 26px;
+    border-right: 1px solid var(--line);
+  }
+  .trust-item:last-child { border-right: 0; }
+  .trust-value {
+    font-family: Fraunces, serif;
+    font-size: 1.75rem;
+    line-height: 1;
+    color: var(--espresso);
+  }
+  .trust-label {
+    margin-top: 8px;
+    color: var(--espresso-mid);
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+  .visual-frame {
+    border: 1px solid var(--line);
+    background: var(--cream-soft);
+    overflow: hidden;
+    box-shadow: 0 22px 60px rgba(19, 37, 58, 0.1);
+  }
+  .visual-frame img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .visual-caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    border-top: 1px solid var(--line);
+    padding: 16px 18px;
+    color: var(--espresso-mid);
+    background: rgba(252, 250, 244, 0.92);
+  }
+  .material-aside {
+    position: relative;
+    align-self: start;
+  }
+  .material-aside img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    box-shadow: 0 18px 46px rgba(19, 37, 58, 0.1);
+  }
+  .material-aside figcaption {
+    border: 1px solid var(--line);
+    border-top: 0;
+    background: var(--cream-soft);
+    padding: 18px;
+  }
+  .system-card {
+    position: relative;
+    background:
+      linear-gradient(180deg, rgba(252, 250, 244, 0.96), rgba(247, 242, 232, 0.96));
+  }
+  .system-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--sage), var(--brass));
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  .system-card:hover::before { opacity: 1; }
+  .image-inset {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid var(--line);
+  }
+  .cta-final {
+    background:
+      linear-gradient(180deg, rgba(19, 37, 58, 0.82), rgba(23, 36, 33, 0.94)),
+      url("assets/hero-studio.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .email-shadow {
+    box-shadow:
+      0 1px 0 rgba(31, 22, 18, 0.05),
+      0 4px 12px rgba(31, 22, 18, 0.08),
+      0 24px 48px rgba(31, 22, 18, 0.12);
+  }
+
+  .module-card { transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s; }
+  .module-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 42px rgba(19, 37, 58, 0.1);
+  }
+
+  @media (max-width: 980px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-visual,
+    .hero-visual img { min-height: 420px; }
+    .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .trust-item:nth-child(2) { border-right: 0; }
+    .trust-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  }
+
+  @media (max-width: 640px) {
+    .hero-visual,
+    .hero-visual img { min-height: 360px; }
+    .hero-note { flex-direction: column; align-items: flex-start; }
+    .trust-grid { grid-template-columns: 1fr; }
+    .trust-item { border-right: 0; border-bottom: 1px solid var(--line); }
+    .trust-item:last-child { border-bottom: 0; }
+    .visual-caption { flex-direction: column; }
+  }
+
+  @media print {
+    .no-print { display: none !important; }
+    body { background: white; }
+    .reveal { opacity: 1; transform: none; animation: none; }
+    .featured-bg { background: #1F1612 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body class="bg-cream text-espresso font-sans relative overflow-x-hidden">
+<div class="grain"></div>
+
+<!-- TOP META BAR -->
+<div class="relative z-10 border-b border-line bg-cream-soft">
+  <div class="max-w-6xl mx-auto px-6 sm:px-10 py-3 flex items-center justify-between text-[0.68rem] sm:text-xs smallcaps-up text-espresso-mid">
+    <span>Proposition · N° 2026/01</span>
+    <span class="hidden md:inline">Document confidentiel</span>
+    <span>Avril 2026</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero-section relative z-10">
+  <div class="max-w-7xl mx-auto px-6 sm:px-10 pt-16 sm:pt-24 pb-14 sm:pb-20 hero-grid">
+
+    <div>
+      <div class="reveal flex items-center gap-4 mb-10">
+        <span class="w-10 h-px bg-brass"></span>
+        <span class="smallcaps-up text-brass">Pour Cuisinella Pessac</span>
+      </div>
+
+      <h1 class="reveal delay-1 font-display font-light leading-[0.96] text-[2.9rem] sm:text-7xl md:text-[5.35rem] max-w-5xl">
+        Une <em class="italic font-normal text-sage">cuisine</em> bien servie<br>
+        <span class="font-display-tight italic font-light">commence par</span> une<br>
+        <em class="italic font-normal text-brass">attention</em> bien portée.
+      </h1>
+
+      <p class="reveal delay-2 mt-10 text-lg sm:text-xl leading-relaxed text-espresso-soft max-w-2xl">
+        Un dispositif sur-mesure pour faire vivre à chaque client la même exigence que vous mettez à concevoir ses espaces — du premier rendez-vous à l'avis Google.
+      </p>
+
+      <div class="reveal delay-3 mt-12 grid sm:grid-cols-2 gap-6 max-w-2xl">
+        <div class="border-t border-line pt-5">
+          <div class="smallcaps-up text-brass mb-2">Proposé par</div>
+          <div class="font-display text-2xl sm:text-3xl">Axel</div>
+          <div class="text-sm text-espresso-mid mt-1">Développeur · 15 ans · 50+ projets</div>
+        </div>
+        <div class="border-t border-line pt-5">
+          <div class="smallcaps-up text-sage mb-2">À l'attention de</div>
+          <div class="font-display text-2xl sm:text-3xl">Marie-Laure Biscuola</div>
+          <div class="text-sm text-espresso-mid mt-1">Cuisinella Pessac · document confidentiel</div>
+        </div>
+      </div>
+    </div>
+
+    <figure class="hero-visual reveal delay-2">
+      <img src="assets/hero-studio.jpg" alt="Table de studio avec matériaux, proposition et interface client" fetchpriority="high">
+      <figcaption class="hero-note">
+        <strong>Relation client dessinée comme un projet.</strong>
+        <span class="smallcaps-up">suivi · confiance · signature</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="trust-band">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-value">400</div>
+          <div class="trust-label">prospects accueillis chaque année</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-value">5</div>
+          <div class="trust-label">moments clés du parcours client couverts</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-value">4 sem.</div>
+          <div class="trust-label">pour livrer une première version opérationnelle</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-value">RGPD</div>
+          <div class="trust-label">hébergement européen et données exportables</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- I — LE CONSTAT -->
+<section class="relative z-10 bg-cream-soft border-b border-line">
+  <div class="max-w-6xl mx-auto px-6 sm:px-10 py-24 sm:py-32">
+
+    <div class="flex items-center gap-4 mb-12">
+      <span class="font-display italic text-brass text-lg">I.</span>
+      <span class="smallcaps-up text-brass">Le constat</span>
+      <span class="ornament-line"></span>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+      <h2 class="lg:col-span-4 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] font-light">
+        Vos cuisines sont <em class="italic">signées.</em><br>
+        Vos communications, elles, restent <em class="italic text-clay">standardisées.</em>
+      </h2>
+
+      <div class="lg:col-span-5 space-y-6 text-espresso-soft text-lg leading-relaxed">
+        <p>
+          Chez Cuisinella Pessac, vous accueillez <strong class="text-espresso font-medium">400 leads entrants par an</strong>. Chacun arrive avec un projet de vie : une famille qui s'agrandit, une rénovation longuement rêvée, un investissement de 15 à 25&nbsp;000&nbsp;€.
+        </p>
+        <p>
+          Pour chacun, vous concevez une pièce unique. Mais entre deux rendez-vous, ce sont des emails templates qui prennent le relais. Des relances qui s'oublient. Un avis Google qu'on n'a jamais demandé après une pose pourtant impeccable.
+        </p>
+        <p class="border-l-2 border-brass pl-6 italic font-display text-espresso text-xl leading-relaxed">
+          Sur 400 leads entrants par an, deux points de conversion en plus représentent huit cuisines supplémentaires. À 15&nbsp;000&nbsp;€ la cuisine, soit cent vingt mille euros de chiffre d'affaires qui se jouent sur la qualité du suivi entre deux rendez-vous.
+        </p>
+      </div>
+
+      <figure class="lg:col-span-3 material-aside">
+        <img src="assets/material-palette.jpg" alt="Palette de matières et couleurs pour une direction visuelle professionnelle" loading="lazy">
+        <figcaption>
+          <div class="smallcaps-up text-sage mb-2">Direction visuelle</div>
+          <p class="text-sm text-espresso-soft leading-relaxed">
+            Une identité plus claire : encre, sauge, laiton discret, papier chaud et matières de cuisine.
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="relative z-10 max-w-6xl mx-auto px-6 py-12 text-center">
+  <div class="font-display italic text-brass opacity-60 text-lg">✦ &nbsp; ✦ &nbsp; ✦</div>
+</div>
+
+<!-- II — LA PROPOSITION -->
+<section class="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 py-16 sm:py-24">
+
+  <div class="flex items-center gap-4 mb-12">
+    <span class="font-display italic text-brass text-lg">II.</span>
+    <span class="smallcaps-up text-brass">La proposition</span>
+    <span class="ornament-line"></span>
+  </div>
+
+  <div class="max-w-4xl">
+    <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light mb-8">
+      Un <em class="italic text-brass">cabinet de correspondance,</em><br>
+      taillé pour Cuisinella Pessac.
+    </h2>
+    <p class="text-lg sm:text-xl text-espresso-soft leading-relaxed max-w-3xl">
+      Pas un outil de marketing automation. Une extension digitale de votre savoir-faire — pensée, dessinée et entretenue pour vous seule.
+    </p>
+  </div>
+
+  <figure class="visual-frame mt-14">
+    <img src="assets/client-journey.jpg" alt="Parcours client illustré en cartes, de R1 au parrainage" loading="lazy">
+    <figcaption class="visual-caption">
+      <span class="smallcaps-up text-sage">Parcours client orchestré</span>
+      <span class="text-sm">Chaque prise de contact devient une preuve de sérieux, pas une relance oubliée.</span>
+    </figcaption>
+  </figure>
+
+  <div class="mt-14 grid md:grid-cols-2 gap-px bg-line border border-line">
+
+    <article class="system-card bg-cream p-10 sm:p-14">
+      <div class="flex items-start gap-6">
+        <span class="font-display italic text-brass text-3xl leading-none mt-1">01.</span>
+        <div class="flex-1">
+          <h3 class="font-display text-2xl mb-4 leading-snug">Nurturing R1 → R2</h3>
+          <p class="text-espresso-soft leading-relaxed">
+            Une séquence de 3 à 4 emails entre les rendez-vous, <em>dessinés sur-mesure</em> dans votre identité visuelle. Photographies de réalisations, témoignages clients, projection du projet.
+          </p>
+          <p class="mt-4 text-sm smallcaps-up text-brass">L'objectif · faire signer dès le R2</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="system-card bg-cream p-10 sm:p-14">
+      <div class="flex items-start gap-6">
+        <span class="font-display italic text-brass text-3xl leading-none mt-1">02.</span>
+        <div class="flex-1">
+          <h3 class="font-display text-2xl mb-4 leading-snug">Rappels &amp; préparation des rendez-vous</h3>
+          <p class="text-espresso-soft leading-relaxed">
+            Email de rappel la veille et le matin du rendez-vous. Préparation du client en amont : ce qu'il peut apporter, ce qu'il peut visualiser.
+          </p>
+          <p class="mt-4 text-sm smallcaps-up text-brass">L'objectif · des échanges plus riches</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="system-card bg-cream p-10 sm:p-14">
+      <div class="flex items-start gap-6">
+        <span class="font-display italic text-brass text-3xl leading-none mt-1">03.</span>
+        <div class="flex-1">
+          <h3 class="font-display text-2xl mb-4 leading-snug">Suivi post-signature &amp; pose</h3>
+          <p class="text-espresso-soft leading-relaxed">
+            Séquence d'accompagnement entre la signature et la pose : préparation du chantier, points de contact rassurants, anticipation du jour J.
+          </p>
+          <p class="mt-4 text-sm smallcaps-up text-brass">L'objectif · zéro angoisse client</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="system-card bg-cream p-10 sm:p-14">
+      <div class="flex items-start gap-6">
+        <span class="font-display italic text-brass text-3xl leading-none mt-1">04.</span>
+        <div class="flex-1">
+          <h3 class="font-display text-2xl mb-4 leading-snug">Demande d'avis Google automatisée</h3>
+          <p class="text-espresso-soft leading-relaxed">
+            Au bon moment après la pose, lorsque la satisfaction est au plus haut. Avec un message qui vous ressemble, et un suivi des envois.
+          </p>
+          <p class="mt-4 text-sm smallcaps-up text-brass">L'objectif · réputation locale renforcée</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="system-card bg-cream p-10 sm:p-14 md:col-span-2">
+      <div class="flex items-start gap-6">
+        <span class="font-display italic text-brass text-3xl leading-none mt-1">05.</span>
+        <div class="flex-1">
+          <h3 class="font-display text-2xl mb-4 leading-snug">Système de parrainage 150&nbsp;€</h3>
+          <p class="text-espresso-soft leading-relaxed max-w-3xl">
+            Une mécanique fluide pour transformer vos clients satisfaits en ambassadeurs. Sollicitation au bon moment du parcours, parcours simple pour recommander un proche, incitation financière de 150&nbsp;€ versée automatiquement après transformation du filleul.
+          </p>
+          <p class="mt-4 text-sm smallcaps-up text-brass">L'objectif · des leads qualifiés sans budget acquisition</p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- III — L'OBSESSION DU DÉTAIL -->
+<section class="relative z-10 bg-espresso text-cream border-t border-line">
+  <div class="max-w-6xl mx-auto px-6 sm:px-10 py-24 sm:py-32">
+
+    <div class="flex items-center gap-4 mb-12">
+      <span class="font-display italic text-brass-soft text-lg">III.</span>
+      <span class="smallcaps-up text-brass-soft">L'attention portée aux détails</span>
+      <span class="ornament-line opacity-30"></span>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-16 lg:gap-20 items-center">
+
+      <div class="lg:col-span-6">
+        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light mb-10">
+          Chaque email envoyé est <em class="italic text-brass-soft">une carte d'invitation,</em> pas une notification.
+        </h2>
+
+        <div class="space-y-6 text-cream/75 text-lg leading-relaxed">
+          <p>
+            Un client qui s'apprête à investir 18&nbsp;000&nbsp;€ dans sa cuisine ne reçoit pas le même type de communication qu'un acheteur de t-shirt. Il mérite un soin équivalent à celui que vous mettez dans le choix d'un plan de travail.
+          </p>
+          <p>
+            Chaque template de votre suite est <strong class="text-cream font-medium">dessiné à la main</strong> : typographie éditoriale, photographies haute qualité, mise en page magazine, identité visuelle Schmidt respectée à la virgule près. Aperçus testés sur Gmail, Outlook, iPhone, Android.
+          </p>
+          <p class="font-display italic text-cream text-xl border-l-2 border-brass-soft pl-6 mt-8">
+            Vos emails ne ressembleront jamais à ceux de votre concurrent du centre commercial.
+          </p>
+        </div>
+      </div>
+
+      <!-- Email mockup -->
+      <div class="lg:col-span-6">
+        <div class="bg-cream-soft text-espresso rounded-sm email-shadow overflow-hidden max-w-md mx-auto lg:ml-auto">
+
+          <div class="bg-cream border-b border-line px-5 py-3 flex items-center justify-between text-[0.65rem] smallcaps-up text-espresso-mid">
+            <span>Cuisinella Pessac</span>
+            <span>Hier · 14:32</span>
+          </div>
+
+          <div class="p-8 sm:p-10">
+
+            <div class="text-center mb-6">
+              <div class="smallcaps-up text-brass text-[0.65rem] mb-1">Maison française · depuis 1934</div>
+              <div class="font-display text-2xl">Cuisinella <em class="italic text-brass">Pessac</em></div>
+              <div class="w-12 h-px bg-line mx-auto mt-3"></div>
+            </div>
+
+            <p class="font-display italic text-lg mb-4">Madame Dupont,</p>
+
+            <p class="text-sm leading-relaxed mb-5 text-espresso-soft">
+              Suite à notre rendez-vous de mardi, j'ai pris le temps de revenir sur votre projet et d'imaginer l'agencement qui rendrait justice à votre cuisine ouverte sur le séjour.
+            </p>
+
+            <img class="image-inset my-6" src="assets/material-palette.jpg" alt="Inspiration matière et palette envoyée au client" loading="lazy">
+
+            <p class="text-sm leading-relaxed mb-5 text-espresso-soft">
+              Vous trouverez ci-dessous quelques éléments d'inspiration, pensés à partir de nos échanges sur le bois clair, la pierre et le laiton patiné.
+            </p>
+
+            <div class="text-center my-7">
+              <span class="inline-block border border-brass text-brass px-8 py-3 text-xs smallcaps-up">
+                Voir votre projet
+              </span>
+            </div>
+
+            <div class="border-t border-line pt-5 mt-6">
+              <p class="font-display italic text-base mb-1">Marie-Laure Biscuola</p>
+              <p class="text-xs text-espresso-mid">Directrice — Cuisinella Pessac</p>
+              <div class="mt-3 text-[0.65rem] smallcaps-up text-espresso-mid">
+                Cuisinella · Pessac · 33600
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="relative z-10 max-w-6xl mx-auto px-6 py-16 text-center">
+  <div class="font-display italic text-brass opacity-60 text-lg">✦ &nbsp; ✦ &nbsp; ✦</div>
+</div>
+
+<!-- IV — L'OFFRE -->
+<section class="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 py-12 sm:py-20">
+
+  <div class="flex items-center gap-4 mb-12">
+    <span class="font-display italic text-brass text-lg">IV.</span>
+    <span class="smallcaps-up text-brass">L'offre</span>
+    <span class="ornament-line"></span>
+  </div>
+
+  <div class="max-w-4xl mb-16">
+    <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light mb-8">
+      Une offre <em class="italic text-brass">claire,</em> sans surprise.
+    </h2>
+    <p class="text-lg sm:text-xl text-espresso-soft leading-relaxed">
+      Une mise en place une fois, un service mensuel qui inclut tout — accompagnement, retouches, disponibilité par téléphone — et la possibilité d'enrichir le dispositif quand vous le souhaitez. <em>Vous n'avez rien à gérer techniquement.</em>
+    </p>
+  </div>
+
+  <!-- Main offer card -->
+  <div class="featured-bg text-cream rounded-sm overflow-hidden">
+
+    <div class="relative z-10 grid lg:grid-cols-12 gap-0">
+
+      <!-- Left: Setup -->
+      <div class="lg:col-span-7 p-10 lg:p-16 border-b lg:border-b-0 lg:border-r border-cream/15">
+
+        <div class="smallcaps-up text-brass-soft text-[0.7rem] mb-4">Mise en place · une fois</div>
+
+        <div class="flex items-baseline gap-4 mb-2">
+          <span class="font-display text-2xl text-cream/40 price-strike">4 800&nbsp;€</span>
+          <span class="font-display text-6xl lg:text-7xl text-cream font-light">3 800&nbsp;€</span>
+        </div>
+        <div class="smallcaps-up text-terracotta text-[0.7rem] mb-10">Tarif partenariat de lancement</div>
+
+        <h3 class="font-display text-2xl mb-6 leading-snug">Conception, développement &amp; livraison</h3>
+
+        <ul class="space-y-3 text-cream/85 text-base">
+          <li class="flex items-start gap-3"><span class="text-brass-soft mt-1">✓</span><span>Atelier de cadrage : identité visuelle, ton, scénarios sur-mesure</span></li>
+          <li class="flex items-start gap-3"><span class="text-brass-soft mt-1">✓</span><span><strong class="text-cream">5 templates email haute couture</strong> dessinés à la main</span></li>
+          <li class="flex items-start gap-3"><span class="text-brass-soft mt-1">✓</span><span>Scénarios couvrant R1, R2, devis, signature, pose</span></li>
+          <li class="flex items-start gap-3"><span class="text-brass-soft mt-1">✓</span><span>Demande d'avis Google automatisée</span></li>
+          <li class="flex items-start gap-3"><span class="text-brass-soft mt-1">✓</span><span><strong class="text-cream">Système de parrainage 150&nbsp;€</strong> intégré</span></li>
+          <li class="flex items-start gap-3"><span class="text-brass-soft mt-1">✓</span><span>Intégration avec votre CRM (export quotidien)</span></li>
+          <li class="flex items-start gap-3"><span class="text-brass-soft mt-1">✓</span><span>Tests Gmail, Outlook, iPhone, Android</span></li>
+          <li class="flex items-start gap-3"><span class="text-brass-soft mt-1">✓</span><span>Formation et accompagnement les premières semaines</span></li>
+        </ul>
+
+      </div>
+
+      <!-- Right: Monthly -->
+      <div class="lg:col-span-5 p-10 lg:p-16">
+
+        <div class="smallcaps-up text-brass-soft text-[0.7rem] mb-4">Service mensuel</div>
+
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="font-display text-6xl text-cream font-light">200&nbsp;€</span>
+          <span class="text-base text-cream/60">/ mois</span>
+        </div>
+        <div class="smallcaps-up text-cream/50 text-[0.7rem] mb-10">Condition de maintien du service</div>
+
+        <h3 class="font-display text-2xl mb-3 leading-snug">Accompagnement &amp; tranquillité</h3>
+        <p class="text-cream/60 text-sm italic mb-6 leading-relaxed">
+          Vous n'avez rien à faire. Tout est entre mes mains.
+        </p>
+
+        <div class="space-y-5">
+
+          <div>
+            <div class="smallcaps-up text-brass-soft text-[0.65rem] mb-2.5">Accompagnement</div>
+            <ul class="space-y-2 text-cream/85 text-sm">
+              <li class="flex items-start gap-3"><span class="text-brass-soft mt-0.5">·</span><span><strong class="text-cream">Disponibilité par téléphone</strong> au moindre problème</span></li>
+              <li class="flex items-start gap-3"><span class="text-brass-soft mt-0.5">·</span><span><strong class="text-cream">Retouches ponctuelles incluses</strong> — textes, contenus, ajustements</span></li>
+              <li class="flex items-start gap-3"><span class="text-brass-soft mt-0.5">·</span><span>Formation et prise en main accompagnée</span></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="smallcaps-up text-brass-soft text-[0.65rem] mb-2.5">Infrastructure &amp; délivrabilité</div>
+            <ul class="space-y-2 text-cream/85 text-sm">
+              <li class="flex items-start gap-3"><span class="text-brass-soft mt-0.5">·</span><span>Hébergement européen sécurisé</span></li>
+              <li class="flex items-start gap-3"><span class="text-brass-soft mt-0.5">·</span><span>Gestion DNS &amp; nom de domaine</span></li>
+              <li class="flex items-start gap-3"><span class="text-brass-soft mt-0.5">·</span><span>Configuration &amp; maintenance du compte d'envoi (Brevo)</span></li>
+              <li class="flex items-start gap-3"><span class="text-brass-soft mt-0.5">·</span><span>Authentification SPF, DKIM &amp; DMARC pour la délivrabilité</span></li>
+              <li class="flex items-start gap-3"><span class="text-brass-soft mt-0.5">·</span><span>Sauvegardes quotidiennes &amp; monitoring permanent</span></li>
+              <li class="flex items-start gap-3"><span class="text-brass-soft mt-0.5">·</span><span>Intervention soir &amp; week-end pour pannes critiques</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <p class="text-xs text-espresso-mid mt-8 italic max-w-3xl">
+    Tarif standard hors partenariat de lancement : 4 800 € de mise en place. Voir conditions section VI. Évolutions hors socle (nouveaux scénarios, nouveaux templates, intégrations supplémentaires) facturées à 90 €/h ou 590 €/jour, jamais sans accord écrit.
+  </p>
+</section>
+
+<!-- V — CATALOGUE DE MODULES -->
+<section class="relative z-10 bg-cream-warm border-y border-line">
+  <div class="max-w-6xl mx-auto px-6 sm:px-10 py-24 sm:py-32">
+
+    <div class="flex items-center gap-4 mb-12">
+      <span class="font-display italic text-brass text-lg">V.</span>
+      <span class="smallcaps-up text-brass">Catalogue de modules</span>
+      <span class="ornament-line"></span>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-12 mb-16">
+      <div class="lg:col-span-7">
+        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light mb-8">
+          Aller <em class="italic text-brass">plus loin,</em> à votre rythme.
+        </h2>
+        <p class="text-lg text-espresso-soft leading-relaxed">
+          Chaque module est <strong class="text-espresso font-medium">activable à tout moment</strong>, indépendamment des autres. Vous démarrez avec la base, et vous enrichissez votre dispositif quand les premiers résultats sont là — uniquement ce qui sert vos enjeux du moment.
+        </p>
+      </div>
+    </div>
+
+    <!-- Featured module: Moodboard -->
+    <article class="bg-cream border border-line module-card mb-6">
+      <div class="grid lg:grid-cols-12 gap-0">
+
+        <div class="lg:col-span-7 p-10 lg:p-14 border-b lg:border-b-0 lg:border-r border-line">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="font-display italic text-brass text-2xl">a.</span>
+            <span class="smallcaps-up text-terracotta text-[0.7rem]">★ Recommandé en priorité</span>
+          </div>
+
+          <h3 class="font-display text-3xl sm:text-4xl mb-5 leading-tight">
+            Moodboard IA <em class="italic">après R1</em>
+          </h3>
+
+          <p class="text-espresso-soft leading-relaxed text-lg mb-6">
+            À l'issue du premier rendez-vous, votre client reçoit un <strong class="text-espresso font-medium">PDF personnalisé</strong> : restitution de ses goûts, planche d'ambiance générée par IA à partir de ses préférences (matériaux, coloris, style), mise en situation dans un intérieur incarné.
+          </p>
+
+          <p class="font-display italic text-espresso text-lg border-l-2 border-brass pl-5">
+            L'effet « waouh » qui vous distingue de toute la concurrence locale, et qui fait basculer la signature au R2.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5 p-10 lg:p-14 bg-cream-soft flex flex-col justify-center">
+          <img class="image-inset mb-8" src="assets/moodboard-r1.jpg" alt="Moodboard IA personnalisé après le premier rendez-vous" loading="lazy">
+
+          <div class="smallcaps-up text-brass text-[0.7rem] mb-3">Mise en place</div>
+          <div class="font-display text-5xl mb-1">1 900&nbsp;€</div>
+          <div class="text-sm text-espresso-mid mb-8">une fois</div>
+
+          <div class="smallcaps-up text-brass text-[0.7rem] mb-3">Récurrent additionnel</div>
+          <div class="flex items-baseline gap-2 mb-1">
+            <span class="font-display text-3xl">+ 90&nbsp;€</span>
+            <span class="text-sm text-espresso-mid">/ mois</span>
+          </div>
+          <div class="text-xs text-espresso-mid italic">Couvre les coûts d'API IA</div>
+
+          <div class="border-t border-line mt-8 pt-6">
+            <div class="smallcaps-up text-espresso-mid text-[0.65rem] mb-2">ROI estimé</div>
+            <p class="text-sm text-espresso-soft leading-relaxed">
+              +2&nbsp;% de conversion R2 = <strong class="text-espresso">~8 cuisines/an</strong>. Module rentabilisé dès la 1ère cuisine signée.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- Other modules grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <article class="bg-cream border border-line p-8 module-card flex flex-col">
+        <div class="font-display italic text-brass text-2xl mb-4">b.</div>
+        <h3 class="font-display text-xl mb-3 leading-snug">Assistant IA conversationnel</h3>
+        <p class="text-sm text-espresso-soft leading-relaxed mb-6 flex-1">
+          Chatbot site web qui qualifie vos leads 24/7 et prend les premiers rendez-vous automatiquement.
+        </p>
+        <div class="border-t border-line pt-4">
+          <div class="font-display text-2xl">2 900&nbsp;€</div>
+          <div class="text-sm text-espresso-mid">+ 120&nbsp;€/mois</div>
+        </div>
+      </article>
+
+      <article class="bg-cream border border-line p-8 module-card flex flex-col">
+        <div class="font-display italic text-brass text-2xl mb-4">c.</div>
+        <h3 class="font-display text-xl mb-3 leading-snug">Landing page sur-mesure</h3>
+        <p class="text-sm text-espresso-soft leading-relaxed mb-6 flex-1">
+          Une page d'atterrissage à votre marque pour vos campagnes Google Ads et Meta — capture des leads qualifiés.
+        </p>
+        <div class="border-t border-line pt-4">
+          <div class="font-display text-2xl">1 500&nbsp;€</div>
+          <div class="text-sm text-espresso-mid">+ 30&nbsp;€/mois</div>
+        </div>
+      </article>
+
+      <article class="bg-cream border border-line p-8 module-card flex flex-col">
+        <div class="font-display italic text-brass text-2xl mb-4">d.</div>
+        <h3 class="font-display text-xl mb-3 leading-snug">Newsletter mensuelle</h3>
+        <p class="text-sm text-espresso-soft leading-relaxed mb-6 flex-1">
+          Une newsletter éditoriale envoyée à votre base — actualités magasin, inspirations, témoignages — pour entretenir le lien sur la durée.
+        </p>
+        <div class="border-t border-line pt-4">
+          <div class="font-display text-2xl">1 200&nbsp;€</div>
+          <div class="text-sm text-espresso-mid">+ 30&nbsp;€/mois</div>
+        </div>
+      </article>
+
+      <article class="bg-cream border border-line p-8 module-card flex flex-col">
+        <div class="font-display italic text-brass text-2xl mb-4">e.</div>
+        <h3 class="font-display text-xl mb-3 leading-snug">Cross-sell post-vente</h3>
+        <p class="text-sm text-espresso-soft leading-relaxed mb-6 flex-1">
+          Une <strong class="text-espresso">interface dédiée</strong> pour configurer vos règles : associez chaque type de cuisine vendue aux compléments à proposer (dressing, rangements, meubles TV). Emails déclenchés automatiquement après signature.
+        </p>
+        <div class="border-t border-line pt-4">
+          <div class="font-display text-2xl">1 800&nbsp;€</div>
+          <div class="text-sm text-espresso-mid">+ 30&nbsp;€/mois</div>
+        </div>
+      </article>
+
+      <article class="bg-cream border border-line p-8 module-card flex flex-col">
+        <div class="font-display italic text-brass text-2xl mb-4">f.</div>
+        <h3 class="font-display text-xl mb-3 leading-snug">Optimisation continue des emails</h3>
+        <p class="text-sm text-espresso-soft leading-relaxed mb-6 flex-1">
+          Mise en place de variantes (A/B) sur vos emails clés, suivi des performances et <strong class="text-espresso">rapport trimestriel</strong> avec recommandations d'amélioration. C'est moi qui pilote, vous récoltez les résultats.
+        </p>
+        <div class="border-t border-line pt-4">
+          <div class="font-display text-2xl">800&nbsp;€</div>
+          <div class="text-sm text-espresso-mid">+ 60&nbsp;€/mois</div>
+        </div>
+      </article>
+
+      <article class="bg-cream-soft border border-dashed border-line p-8 flex flex-col items-center justify-center text-center">
+        <div class="font-display italic text-brass text-3xl mb-3">✦</div>
+        <h3 class="font-display text-lg mb-3 leading-snug">D'autres idées ?</h3>
+        <p class="text-sm text-espresso-soft leading-relaxed">
+          Les modules s'inventent à partir de vos besoins terrain. Parlons-en.
+        </p>
+      </article>
+
+    </div>
+
+    <p class="mt-12 text-sm text-espresso-mid italic max-w-3xl">
+      Chaque module est conçu pour s'intégrer naturellement à votre dispositif existant. Vous activez quand vous voulez, vous arrêtez quand vous voulez. Aucune surprise sur la facture : tout est devisé avant.
+    </p>
+  </div>
+</section>
+
+<!-- VI — PARTENARIAT DE LANCEMENT -->
+<section class="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 py-24 sm:py-32">
+
+  <div class="flex items-center gap-4 mb-12">
+    <span class="font-display italic text-brass text-lg">VI.</span>
+    <span class="smallcaps-up text-brass">Une offre de lancement</span>
+    <span class="ornament-line"></span>
+  </div>
+
+  <div class="grid lg:grid-cols-12 gap-16 items-start">
+
+    <div class="lg:col-span-5">
+      <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light mb-10">
+        <em class="italic">Construisons ensemble</em> la première signature.
+      </h2>
+
+      <p class="text-espresso-soft text-lg leading-relaxed mb-6">
+        Cuisinella Pessac serait mon premier partenaire de lancement sur cette suite dédiée aux cuisinistes indépendants. Une remise de <strong class="text-espresso font-medium">1 000&nbsp;€ sur la mise en place</strong> est proposée en contrepartie de deux engagements simples.
+      </p>
+
+      <div class="bg-cream-soft border border-line p-6">
+        <div class="smallcaps-up text-brass text-[0.7rem] mb-2">Économie partenariat</div>
+        <div class="flex items-baseline gap-3">
+          <span class="font-display text-2xl text-espresso-mid price-strike">4 800&nbsp;€</span>
+          <span class="font-display text-4xl text-espresso">3 800&nbsp;€</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7 space-y-10">
+
+      <div class="border-l-2 border-brass pl-8">
+        <div class="font-display italic text-brass text-2xl mb-3">Un.</div>
+        <p class="text-espresso-soft leading-relaxed">
+          Le partage de <strong class="text-espresso font-medium">2 ou 3 indicateurs simples sur 3 à 6 mois</strong> — taux de conversion R2, chiffre d'affaires additionnel, avis Google générés, leads relancés. Indicateurs définis ensemble au démarrage.
+        </p>
+      </div>
+
+      <div class="border-l-2 border-brass pl-8">
+        <div class="font-display italic text-brass text-2xl mb-3">Deux.</div>
+        <p class="text-espresso-soft leading-relaxed">
+          Un <strong class="text-espresso font-medium">témoignage vidéo de 3 à 4 minutes</strong>, tourné chez vous, à 3 mois de la mise en production — uniquement si les résultats sont au rendez-vous.
+        </p>
+      </div>
+
+      <p class="text-sm text-espresso-mid italic pt-4">
+        Sans ces contreparties, le tarif standard de 4 800 € s'applique. Le choix vous revient entièrement.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- VII — ENGAGEMENTS -->
+<section class="relative z-10 bg-cream-soft border-y border-line">
+  <div class="max-w-6xl mx-auto px-6 sm:px-10 py-24 sm:py-32">
+
+    <div class="flex items-center gap-4 mb-12">
+      <span class="font-display italic text-brass text-lg">VII.</span>
+      <span class="smallcaps-up text-brass">Engagements</span>
+      <span class="ornament-line"></span>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-16">
+
+      <div class="lg:col-span-5">
+        <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] font-light mb-8">
+          Une <em class="italic text-brass">infrastructure</em> qui se fait oublier.
+        </h2>
+        <p class="text-espresso-soft text-lg leading-relaxed mb-4">
+          Le service mensuel inclut l'hébergement européen, les mises à jour de sécurité, les sauvegardes quotidiennes, le monitoring permanent et l'intervention en cas d'incident — y compris en soirée et le week-end pour les pannes critiques.
+        </p>
+        <p class="font-display italic text-espresso text-xl mt-6">
+          Le système doit fonctionner sans que vous y pensiez. C'est mon métier de m'en assurer.
+        </p>
+      </div>
+
+      <div class="lg:col-span-7 grid sm:grid-cols-2 gap-px bg-line border border-line">
+        <div class="bg-cream p-8">
+          <div class="font-display italic text-brass text-lg mb-3">a.</div>
+          <h3 class="font-display text-lg mb-2">Vos données restent les vôtres</h3>
+          <p class="text-sm text-espresso-soft leading-relaxed">Exportables à tout moment, sans condition.</p>
+        </div>
+        <div class="bg-cream p-8">
+          <div class="font-display italic text-brass text-lg mb-3">b.</div>
+          <h3 class="font-display text-lg mb-2">Aucune surprise sur la facture</h3>
+          <p class="text-sm text-espresso-soft leading-relaxed">Toute évolution hors socle est devisée à l'avance, jamais facturée sans accord écrit.</p>
+        </div>
+        <div class="bg-cream p-8">
+          <div class="font-display italic text-brass text-lg mb-3">c.</div>
+          <h3 class="font-display text-lg mb-2">Service au mois, sans piège</h3>
+          <p class="text-sm text-espresso-soft leading-relaxed">Le service mensuel est la condition technique de maintien de la solution. Vous l'arrêtez quand vous voulez avec 1 mois de préavis.</p>
+        </div>
+        <div class="bg-cream p-8">
+          <div class="font-display italic text-brass text-lg mb-3">d.</div>
+          <h3 class="font-display text-lg mb-2">Conformité RGPD intégrale</h3>
+          <p class="text-sm text-espresso-soft leading-relaxed">Hébergement européen, consentements, désinscriptions automatiques.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIII — CALENDRIER -->
+<section class="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 py-24 sm:py-32">
+
+  <div class="flex items-center gap-4 mb-12">
+    <span class="font-display italic text-brass text-lg">VIII.</span>
+    <span class="smallcaps-up text-brass">Calendrier</span>
+    <span class="ornament-line"></span>
+  </div>
+
+  <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light max-w-4xl mb-16">
+    Première version <em class="italic text-brass">livrée en quatre semaines.</em>
+  </h2>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-line border border-line">
+
+    <article class="bg-cream p-8 lg:p-10">
+      <div class="font-display italic text-brass text-2xl mb-4">I.</div>
+      <div class="smallcaps-up text-espresso-mid text-[0.7rem] mb-3">Semaine 1</div>
+      <h3 class="font-display text-xl mb-3">Cadrage</h3>
+      <p class="text-sm text-espresso-soft leading-relaxed">
+        Atelier de design avec vous : identité visuelle, ton, scénarios, cas particuliers Cuisinella Pessac.
+      </p>
+    </article>
+
+    <article class="bg-cream p-8 lg:p-10">
+      <div class="font-display italic text-brass text-2xl mb-4">II.</div>
+      <div class="smallcaps-up text-espresso-mid text-[0.7rem] mb-3">Semaines 2-3</div>
+      <h3 class="font-display text-xl mb-3">Conception</h3>
+      <p class="text-sm text-espresso-soft leading-relaxed">
+        Dessin des templates, intégration CRM, paramétrage des automatisations, tests internes.
+      </p>
+    </article>
+
+    <article class="bg-cream p-8 lg:p-10">
+      <div class="font-display italic text-brass text-2xl mb-4">III.</div>
+      <div class="smallcaps-up text-espresso-mid text-[0.7rem] mb-3">Semaine 4</div>
+      <h3 class="font-display text-xl mb-3">Recette</h3>
+      <p class="text-sm text-espresso-soft leading-relaxed">
+        Validation ensemble, tests sur Gmail, Outlook, iPhone, ajustements finaux.
+      </p>
+    </article>
+
+    <article class="bg-cream p-8 lg:p-10">
+      <div class="font-display italic text-brass text-2xl mb-4">IV.</div>
+      <div class="smallcaps-up text-espresso-mid text-[0.7rem] mb-3">Fin S4</div>
+      <h3 class="font-display text-xl mb-3">Mise en production</h3>
+      <p class="text-sm text-espresso-soft leading-relaxed">
+        Bascule progressive, monitoring, première campagne envoyée. Disponibilité quotidienne le premier mois.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- IX — CTA FINAL -->
+<section class="relative z-10 cta-final text-cream">
+  <div class="max-w-6xl mx-auto px-6 sm:px-10 py-32 sm:py-40 text-center">
+
+    <div class="font-display italic text-brass-soft text-2xl mb-8">✦</div>
+
+    <h2 class="font-display text-6xl sm:text-7xl lg:text-9xl leading-[0.95] font-light mb-10">
+      <em class="italic">On commence ?</em>
+    </h2>
+
+    <p class="text-cream/75 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-16">
+      Cette proposition est valable jusqu'au <strong class="text-cream font-medium">9 mai 2026</strong>. Au-delà, je m'engage sur d'autres projets et ne pourrai garantir la disponibilité ni les conditions de l'offre de partenariat.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-px bg-cream/15 border border-cream/15 max-w-3xl mx-auto text-left">
+
+      <div class="bg-espresso p-8">
+        <div class="smallcaps-up text-brass-soft text-[0.7rem] mb-3">Pour échanger</div>
+        <h3 class="font-display text-2xl mb-3 text-cream">Par téléphone</h3>
+        <p class="text-sm text-cream/70 leading-relaxed mb-5">
+          Pour valider les détails, lever vos questions, ou simplement en parler. Disponible tous les jours.
+        </p>
+        <div class="font-display text-lg text-cream">06 42 65 11 38</div>
+      </div>
+
+      <div class="bg-espresso p-8 border-l border-cream/15">
+        <div class="smallcaps-up text-brass-soft text-[0.7rem] mb-3">Pour finaliser</div>
+        <h3 class="font-display text-2xl mb-3 text-cream">Recevoir le devis</h3>
+        <p class="text-sm text-cream/70 leading-relaxed mb-5">
+          Devis officiel via Malt, avec paiement sécurisé Hiscox. Envoi sous 24h après votre accord.
+        </p>
+        <div class="text-xs smallcaps-up text-brass-soft">→ via Malt</div>
+      </div>
+
+    </div>
+
+    <div class="mt-20 font-display italic text-brass-soft text-2xl">✦</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="relative z-10 bg-cream-soft border-t border-line">
+  <div class="max-w-6xl mx-auto px-6 sm:px-10 py-12 grid sm:grid-cols-3 gap-6 items-center text-xs smallcaps-up text-espresso-mid">
+    <div>
+      <div class="font-display italic text-base text-espresso normal-case tracking-normal" style="font-variant: normal; letter-spacing: normal;">Document personnel</div>
+      <div class="mt-1">Marie-Laure Biscuola — Cuisinella Pessac</div>
+    </div>
+    <div class="sm:text-center">
+      Établi par Axel — Avril 2026
+    </div>
+    <div class="sm:text-right">
+      Validité : 9 mai 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
