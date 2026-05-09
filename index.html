@@ -62,13 +62,44 @@
   body {
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
-    background:
-      radial-gradient(circle at 80% -10%, rgba(210, 176, 109, 0.14), transparent 34rem),
-      linear-gradient(180deg, #FBF8F3 0%, #F4F0EA 48%, #E9E1D6 100%);
+    background: var(--cream);
   }
   ::selection { background: rgba(111, 133, 111, 0.28); }
   .font-display { font-variation-settings: "opsz" 144, "SOFT" 50; }
   .font-display-tight { font-variation-settings: "opsz" 14, "SOFT" 0; }
+
+  .display-title {
+    font-weight: 430;
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+  .display-title em { font-weight: 520; }
+  .display-title .font-display-tight { font-weight: 450; }
+  .hero-title {
+    font-size: 2.72rem;
+    line-height: 1.02;
+  }
+  .section-title {
+    font-size: 2.42rem;
+    line-height: 1.09;
+  }
+  .cta-title {
+    font-size: 4.35rem;
+    line-height: 0.96;
+  }
+  .price-row {
+    align-items: baseline;
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+  }
+  .price-value {
+    white-space: nowrap;
+    font-weight: 430;
+    line-height: 0.92;
+  }
+  .price-value-lg { font-size: 3.8rem; }
+  .price-value-monthly { font-size: 4.35rem; }
+  .price-suffix { white-space: nowrap; }
 
   .grain {
     position: fixed; inset: 0; pointer-events: none; z-index: 1;
@@ -107,10 +138,7 @@
   .delay-4 { animation-delay: 0.45s; }
 
   .featured-bg {
-    background:
-      radial-gradient(circle at 18% 0%, rgba(210, 176, 109, 0.16), transparent 28rem),
-      linear-gradient(135deg, rgba(111, 133, 111, 0.18), transparent 42%),
-      linear-gradient(180deg, #1A2420 0%, #17263A 100%);
+    background: #17263A;
     position: relative;
     overflow: hidden;
   }
@@ -142,7 +170,7 @@
     border-top: 8px solid #744031;
   }
 
-  .hairline { background: linear-gradient(90deg, transparent, var(--line) 20%, var(--line) 80%, transparent); height: 1px; }
+  .hairline { background: var(--line); height: 1px; opacity: 0.72; }
 
   .hero-section {
     position: relative;
@@ -240,7 +268,7 @@
   }
   .visual-frame {
     border: 1px solid var(--line);
-    background: linear-gradient(180deg, #FBF8F3, #F4F0EA);
+    background: var(--cream-soft);
     overflow: hidden;
     box-shadow: 0 24px 62px rgba(23, 38, 58, 0.11);
   }
@@ -277,15 +305,14 @@
   }
   .system-card {
     position: relative;
-    background:
-      linear-gradient(180deg, rgba(251, 248, 243, 0.98), rgba(244, 240, 234, 0.98));
+    background: var(--cream-soft);
   }
   .system-card::before {
     content: "";
     position: absolute;
     inset: 0 auto 0 0;
     width: 3px;
-    background: linear-gradient(180deg, var(--sage-dark), var(--brass));
+    background: var(--sage-dark);
     opacity: 0;
     transition: opacity 0.35s ease;
   }
@@ -299,7 +326,7 @@
   }
   .cta-final {
     background:
-      linear-gradient(180deg, rgba(23, 38, 58, 0.82), rgba(23, 28, 26, 0.94)),
+      linear-gradient(rgba(23, 28, 26, 0.88), rgba(23, 28, 26, 0.88)),
       url("assets/hero-studio.jpg");
     background-size: cover;
     background-position: center;
@@ -328,6 +355,8 @@
   }
 
   @media (max-width: 640px) {
+    .hero-title br,
+    .section-title br { display: none; }
     .hero-visual,
     .hero-visual img { min-height: 360px; }
     .hero-note { flex-direction: column; align-items: flex-start; }
@@ -335,6 +364,22 @@
     .trust-item { border-right: 0; border-bottom: 1px solid var(--line); }
     .trust-item:last-child { border-bottom: 0; }
     .visual-caption { flex-direction: column; }
+  }
+
+  @media (min-width: 640px) {
+    .hero-title { font-size: 4.5rem; line-height: 0.98; }
+    .section-title { font-size: 3rem; line-height: 1.06; }
+    .cta-title { font-size: 4.5rem; }
+  }
+
+  @media (min-width: 768px) {
+    .hero-title { font-size: 5.35rem; }
+  }
+
+  @media (min-width: 1024px) {
+    .section-title { font-size: 3.75rem; }
+    .cta-title { font-size: 8rem; }
+    .price-value-lg { font-size: 4.5rem; }
   }
 
   @media print {
@@ -368,9 +413,9 @@
         <span class="smallcaps-up text-brass">Pour Cuisinella Pessac</span>
       </div>
 
-      <h1 class="reveal delay-1 font-display font-light leading-[0.96] text-[2.9rem] sm:text-7xl md:text-[5.35rem] max-w-5xl">
+      <h1 class="reveal delay-1 font-display display-title hero-title max-w-5xl">
         Une <em class="italic font-normal text-sage">cuisine</em> bien servie<br>
-        <span class="font-display-tight italic font-light">commence par</span> une<br>
+        <span class="font-display-tight italic">commence par</span> une<br>
         <em class="italic font-normal text-brass">attention</em> bien portée.
       </h1>
 
@@ -436,7 +481,7 @@
     </div>
 
     <div class="grid lg:grid-cols-12 gap-12 lg:gap-14 items-start">
-      <h2 class="lg:col-span-4 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] font-light">
+      <h2 class="lg:col-span-4 font-display display-title section-title">
         Vos cuisines sont <em class="italic">signées.</em><br>
         Vos communications, elles, restent <em class="italic text-clay">standardisées.</em>
       </h2>
@@ -481,7 +526,7 @@
   </div>
 
   <div class="max-w-4xl">
-    <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light mb-8">
+    <h2 class="font-display display-title section-title mb-8">
       Un <em class="italic text-brass">cabinet de correspondance,</em><br>
       taillé pour Cuisinella Pessac.
     </h2>
@@ -581,7 +626,7 @@
     <div class="grid lg:grid-cols-12 gap-16 lg:gap-20 items-center">
 
       <div class="lg:col-span-6">
-        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light mb-10">
+        <h2 class="font-display display-title section-title mb-10">
           Chaque email envoyé est <em class="italic text-brass-soft">une carte d'invitation,</em> pas une notification.
         </h2>
 
@@ -663,7 +708,7 @@
   </div>
 
   <div class="max-w-4xl mb-16">
-    <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light mb-8">
+    <h2 class="font-display display-title section-title mb-8">
       Une offre <em class="italic text-brass">claire,</em> sans surprise.
     </h2>
     <p class="text-lg sm:text-xl text-espresso-soft leading-relaxed">
@@ -681,9 +726,9 @@
 
         <div class="smallcaps-up text-brass-soft text-[0.7rem] mb-4">Mise en place · une fois</div>
 
-        <div class="flex items-baseline gap-4 mb-2">
+        <div class="price-row flex gap-4 mb-2">
           <span class="font-display text-2xl text-cream/40 price-strike">4 800&nbsp;€</span>
-          <span class="font-display text-6xl lg:text-7xl text-cream font-light">3 800&nbsp;€</span>
+          <span class="font-display price-value price-value-lg text-cream">3 800&nbsp;€</span>
         </div>
         <div class="smallcaps-up text-terracotta text-[0.7rem] mb-10">Tarif partenariat de lancement</div>
 
@@ -707,9 +752,9 @@
 
         <div class="smallcaps-up text-brass-soft text-[0.7rem] mb-4">Service mensuel</div>
 
-        <div class="flex items-baseline gap-2 mb-2">
-          <span class="font-display text-6xl text-cream font-light">200&nbsp;€</span>
-          <span class="text-base text-cream/60">/ mois</span>
+        <div class="price-row flex gap-2 mb-2">
+          <span class="font-display price-value price-value-monthly text-cream">200&nbsp;€</span>
+          <span class="price-suffix text-base text-cream/60">/ mois</span>
         </div>
         <div class="smallcaps-up text-cream/50 text-[0.7rem] mb-10">Condition de maintien du service</div>
 
@@ -764,7 +809,7 @@
 
     <div class="grid lg:grid-cols-12 gap-12 mb-16">
       <div class="lg:col-span-7">
-        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light mb-8">
+        <h2 class="font-display display-title section-title mb-8">
           Aller <em class="italic text-brass">plus loin,</em> à votre rythme.
         </h2>
         <p class="text-lg text-espresso-soft leading-relaxed">
@@ -912,7 +957,7 @@
   <div class="grid lg:grid-cols-12 gap-16 items-start">
 
     <div class="lg:col-span-5">
-      <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light mb-10">
+      <h2 class="font-display display-title section-title mb-10">
         <em class="italic">Construisons ensemble</em> la première signature.
       </h2>
 
@@ -966,7 +1011,7 @@
     <div class="grid lg:grid-cols-12 gap-16">
 
       <div class="lg:col-span-5">
-        <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] font-light mb-8">
+        <h2 class="font-display display-title section-title mb-8">
           Une <em class="italic text-brass">infrastructure</em> qui se fait oublier.
         </h2>
         <p class="text-espresso-soft text-lg leading-relaxed mb-4">
@@ -1012,7 +1057,7 @@
     <span class="ornament-line"></span>
   </div>
 
-  <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light max-w-4xl mb-16">
+  <h2 class="font-display display-title section-title max-w-4xl mb-16">
     Première version <em class="italic text-brass">livrée en quatre semaines.</em>
   </h2>
 
@@ -1063,7 +1108,7 @@
 
     <div class="font-display italic text-brass-soft text-2xl mb-8">✦</div>
 
-    <h2 class="font-display text-6xl sm:text-7xl lg:text-9xl leading-[0.95] font-light mb-10">
+    <h2 class="font-display display-title cta-title mb-10">
       <em class="italic">On commence ?</em>
     </h2>
 
