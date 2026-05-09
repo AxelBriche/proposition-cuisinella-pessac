@@ -365,6 +365,10 @@
     .trust-item { border-right: 0; border-bottom: 1px solid var(--line); }
     .trust-item:last-child { border-bottom: 0; }
     .visual-caption { flex-direction: column; }
+    .journey-visual {
+      height: 300px;
+      object-position: right center;
+    }
   }
 
   @media (min-width: 640px) {
@@ -537,7 +541,7 @@
   </div>
 
   <figure class="visual-frame mt-14">
-    <img src="assets/client-journey.jpg" alt="Parcours client illustré en cartes, de R1 au parrainage" loading="lazy">
+    <img class="journey-visual" src="assets/client-journey-v2.jpg" alt="Parcours client illustré en cartes, de R1 au parrainage" loading="lazy">
     <figcaption class="visual-caption">
       <span class="smallcaps-up text-sage">Parcours client orchestré</span>
       <span class="text-sm">Chaque prise de contact devient une preuve de sérieux, pas une relance oubliée.</span>
