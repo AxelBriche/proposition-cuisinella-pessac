@@ -79,6 +79,7 @@
   .hero-title {
     font-size: 2.72rem;
     line-height: 1.02;
+    text-wrap: normal;
   }
   .section-title {
     font-size: 2.42rem;
@@ -533,6 +534,27 @@
     .price-value-lg { font-size: 4.5rem; }
   }
 
+  @media (min-width: 981px) {
+    .hero-title .hero-line {
+      display: block;
+      white-space: nowrap;
+    }
+  }
+
+  @media (min-width: 981px) and (max-width: 1139px) {
+    .hero-title {
+      font-size: 4.05rem;
+      line-height: 1.01;
+    }
+  }
+
+  @media (min-width: 1140px) and (max-width: 1279px) {
+    .hero-title {
+      font-size: 4.75rem;
+      line-height: 1;
+    }
+  }
+
   @media print {
     .no-print { display: none !important; }
     body { background: white; }
@@ -565,9 +587,9 @@
       </div>
 
       <h1 class="reveal delay-1 font-display display-title hero-title max-w-5xl">
-        Une <em class="italic font-normal text-sage">cuisine</em> bien servie<br>
-        <span class="font-display-tight italic">commence par</span> une<br>
-        <em class="italic font-normal text-brass">attention</em> bien portée.
+        <span class="hero-line">Une <em class="italic font-normal text-sage">cuisine</em> bien servie</span>
+        <span class="hero-line"><span class="font-display-tight italic">commence par</span> une</span>
+        <span class="hero-line"><em class="italic font-normal text-brass">attention</em> bien portée.</span>
       </h1>
 
       <p class="reveal delay-2 mt-10 text-lg sm:text-xl leading-relaxed text-espresso-soft max-w-2xl">
